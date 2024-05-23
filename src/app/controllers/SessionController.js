@@ -5,12 +5,12 @@ import authConfig from '../../config/auth';
 
 class SessionController {
   async store(request, response) {
-    const scheme = Yup.object({
+    const schema = Yup.object({
       email: Yup.string().email().required(),
       password: Yup.string().min(6).required(),
     });
 
-    const isValid = await scheme.isValid(request.body);
+    const isValid = await schema.isValid(request.body);
 
     const emailOrPasswordIncorrect = () => {
       response

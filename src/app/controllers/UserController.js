@@ -4,7 +4,7 @@ import User from '../models/User';
 
 class UserController {
   async store(request, response) {
-    const scheme = Yup.object({
+    const schema = Yup.object({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
       password: Yup.string().min(6).required(),
@@ -12,7 +12,7 @@ class UserController {
     });
 
     try {
-      scheme.validateSync(request.body, { abortEarly: false });
+      schema.validateSync(request.body, { abortEarly: false });
     } catch (err) {
       return response.status(400).json({ error: err.errors });
     }
