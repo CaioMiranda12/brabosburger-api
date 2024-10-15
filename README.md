@@ -1,4 +1,4 @@
-<h1>API DevBurger</h1>
+<h1>API Brabos Burger</h1>
 
 Um projeto de uma Hamburgueria, com sistema de login/cadastro, de categorias, produtos, os quais podem ou não estar em oferta,  sendo possível alterar sua quantidade, e selecionar um ou mais produtos para salvar no carrinho e mandar o pedido.
 
