@@ -1,8 +1,20 @@
 <h1>API Brabos Burger</h1>
 
-Um projeto de uma Hamburgueria, com sistema de login/cadastro, de categorias, produtos, os quais podem ou não estar em oferta,  sendo possível alterar sua quantidade, e selecionar um ou mais produtos para salvar no carrinho e mandar o pedido.
+Este projeto simula uma hamburgueria online, oferecendo login, organização por categorias e um sistema intuitivo de pedidos
 
-A senha do usuário é criptografada com o jsonwebtoken(JWT) e os dados do usuario e dos pedidos são salvos nos banco de dados PostgreSQL e MongoDB.
+## ℹ️ Sobre o Projeto
 
-Backend: Node.js, Express, cors, sequelize, mongoose ,bcrypt, jsonwebtoken, multer e yup
-Banco de dados: PostgreSQL e MongoDB
+Um site de hamburgueria com login, categorias para fácil navegação e ofertas do dia em destaque. Permite selecionar itens e enviá-los ao carrinho de forma simples e eficiente. Foi desenvolvido com as seguintes tecnologias:
+
+- Linguagem: JavaScript
+- Framework: NodeJS
+- Banco de Dados: PostgreSQL e MongoDB
+
+## 🛠️ Ferramentas Utilizadas
+
+### Back-End: 
+Node.js, Express, CORS, Docker, Sequelize, Mongoose, Bcrypt, JsonWebToken, Multer, Yup.
+<br><br>
+
+
+
