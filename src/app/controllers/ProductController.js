@@ -31,6 +31,12 @@ class ProductController {
     const { filename: path } = request.file;
     const { name, price, category_id, offer } = request.body;
 
+    const categoryExists = await Category.findByPk(category_id);
+
+    if (!categoryExists) {
+      return response.status(400).json({ error: 'Category not found' });
+    }
+
     const product = await Product.create({
       name,
       price,
@@ -94,7 +100,9 @@ class ProductController {
       },
     );
 
-    return response.status(200).json();
+    const updatedProduct = await Product.findByPk(id);
+
+    return response.status(200).json(updatedProduct);
   }
 
   async index(request, response) {
