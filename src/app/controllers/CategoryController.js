@@ -102,7 +102,9 @@ class CategoryController {
       },
     );
 
-    return response.status(200).json();
+    const updatedCategory = await Category.findByPk(id);
+
+    return response.status(200).json(updatedCategory);
   }
 
   async index(request, response) {
