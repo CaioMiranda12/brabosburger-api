@@ -38,6 +38,28 @@ class OrderController {
       },
     });
 
+    const foundIds = findProducts.map((product) => product.id);
+
+    const noExistsIds = productsId.filter((id) => !foundIds.includes(id));
+
+    const removeRepeatIds = () => {
+      const noRepeatNoExistsIds = [];
+
+      for (let i = 0; i < noExistsIds.length; i++) {
+        if (!noRepeatNoExistsIds.includes(noExistsIds[i])) {
+          noRepeatNoExistsIds.push(noExistsIds[i]);
+        }
+      }
+
+      return noRepeatNoExistsIds;
+    };
+
+    if (noExistsIds.length > 0) {
+      return response
+        .status(400)
+        .json({ error: `Product id not found: ${removeRepeatIds()}` });
+    }
+
     const formattedProducts = findProducts.map((product) => {
       const productIndex = products.findIndex((item) => item.id === product.id);
 
