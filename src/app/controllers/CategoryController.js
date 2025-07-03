@@ -110,7 +110,9 @@ class CategoryController {
   async index(request, response) {
     const categories = await Category.findAll();
 
-    return response.json(categories);
+    const sortedCategories = categories.sort((a, b) => a.id - b.id);
+
+    return response.json(sortedCategories);
   }
 }
 
