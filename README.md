@@ -16,6 +16,31 @@ Um site de hamburgueria com login, categorias para fácil navegação e ofertas 
 Node.js, Express, CORS, Docker, Sequelize, Mongoose, Bcrypt, JsonWebToken, Multer, Yup.
 <br><br>
 
+## 🚀 Como iniciar o projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/CaioMiranda12/dashboard-api.git
+
+# Acesse a pasta
+cd brabosburger-api
+
+# Abra no VSCode (opcional)
+code .
+
+# Instale as dependências
+yarn install
+
+# Suba o container do banco de dados
+docker-compose up -d
+
+# Rode as migrations do Sequelize
+npx sequelize-cli db:migrate
+
+# Inicie o servidor de desenvolvimento
+yarn dev
+```
+
 ## 📚 Rotas da API
 
 ```
